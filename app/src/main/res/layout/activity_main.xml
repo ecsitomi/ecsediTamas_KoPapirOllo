@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Ebben lesznek majd a képek-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:gravity="center">
+        
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imagePlayer"
+            android:src="@drawable/rock"
+            android:layout_marginTop="20dp"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textPlayer"
+            android:text="A Te választásod"
+            android:textSize="30sp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageCPU"
+            android:src="@drawable/rock"
+            android:layout_marginTop="30dp"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCPU"
+            android:text="A gép választása"
+            android:textSize="30sp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+    </LinearLayout>
+
+    <!--Itt lesznek majd az eredmények-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scoreLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/mainLayout"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eredmény: Ember: "
+            android:textSize="20sp"
+            android:id="@+id/eredmenyEmber"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:id="@+id/eredmenyEmberPont"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Computer: "
+            android:textSize="20sp"
+            android:id="@+id/eredmenyCPU"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:id="@+id/eredmenyCPUPont"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/scoreLayout"
+        android:layout_marginTop="30dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kő"
+            android:textSize="20sp"
+            android:background="@color/grey"
+            android:id="@+id/buttonRock"
+            android:layout_margin="20dp"></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Papír"
+            android:textSize="20sp"
+            android:background="@color/grey"
+            android:id="@+id/buttonPaper"></Button>
+
+        <Button
+            android:id="@+id/buttonScis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/grey"
+            android:text="Olló"
+            android:textSize="20sp"></Button>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
