@@ -36,16 +36,23 @@ public class MainActivity extends AppCompatActivity {
         //A játékos választ
         buttonRock.setOnClickListener(v -> {
             imagePlayer.setImageResource(R.drawable.rock);
-            emberValaszt = 0;});
+            emberValaszt = 0;
+            cpuRandom();
+            kiNyert(emberValaszt,cpuValaszt);
+            gameOver(emberPont,cpuPont);});
         buttonPaper.setOnClickListener(v -> {
             imagePlayer.setImageResource(R.drawable.paper);
-            emberValaszt = 1;});
+            emberValaszt = 1;
+            cpuRandom();
+            kiNyert(emberValaszt,cpuValaszt);
+            gameOver(emberPont,cpuPont);});
         buttonScis.setOnClickListener(v -> {
             imagePlayer.setImageResource(R.drawable.scissors);
-            emberValaszt = 2;});
-        cpuRandom();
-        kiNyert(emberValaszt,cpuValaszt);
-        gameOver(emberPont,cpuPont);
+            emberValaszt = 2;
+            cpuRandom();
+            kiNyert(emberValaszt,cpuValaszt);
+            gameOver(emberPont,cpuPont);});
+
     }
 
     public void init(){
